@@ -1,0 +1,39 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26124.0
+MinimumVisualStudioVersion = 15.0.26124.0
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{AA36135F-0517-4440-BDC6-F5E4D3D4EC64}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebPodcast.WebApi", "src\WebPodcast.WebApi\WebPodcast.WebApi.csproj", "{445307A5-1232-4704-8576-20E72F3605DD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{445307A5-1232-4704-8576-20E72F3605DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{445307A5-1232-4704-8576-20E72F3605DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{445307A5-1232-4704-8576-20E72F3605DD}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{445307A5-1232-4704-8576-20E72F3605DD}.Debug|x64.Build.0 = Debug|Any CPU
+		{445307A5-1232-4704-8576-20E72F3605DD}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{445307A5-1232-4704-8576-20E72F3605DD}.Debug|x86.Build.0 = Debug|Any CPU
+		{445307A5-1232-4704-8576-20E72F3605DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{445307A5-1232-4704-8576-20E72F3605DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{445307A5-1232-4704-8576-20E72F3605DD}.Release|x64.ActiveCfg = Release|Any CPU
+		{445307A5-1232-4704-8576-20E72F3605DD}.Release|x64.Build.0 = Release|Any CPU
+		{445307A5-1232-4704-8576-20E72F3605DD}.Release|x86.ActiveCfg = Release|Any CPU
+		{445307A5-1232-4704-8576-20E72F3605DD}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{445307A5-1232-4704-8576-20E72F3605DD} = {AA36135F-0517-4440-BDC6-F5E4D3D4EC64}
+	EndGlobalSection
+EndGlobal
