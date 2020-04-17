@@ -26,6 +26,7 @@ namespace WebPodcast.WebApi
         {
             services.AddDbContext<DataContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+            services.AddScoped<IDatingRepository, DatingRepository>();
             services.AddControllers();
         }
 

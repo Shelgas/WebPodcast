@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using WebPodcast.WebApi.Data;
 
 namespace WebPodcast.WebApi.Controllers
 {
@@ -11,11 +12,19 @@ namespace WebPodcast.WebApi.Controllers
     [ApiController]
     public class PodcastController : ControllerBase
     {
+        private readonly IDatingRepository _repo;
+        
+        public PodcastController(IDatingRepository repo)
+        {
+            _repo = repo;
+        }
+
 
         [HttpGet]
-        public IActionResult GetPodcasts()
+        public async Task<IActionResult> GetPodcasts()
         {
-            return Ok();
+            var podcasts = await _repo.GetPodcasts();
+            return Ok(podcasts);
         }
     }
 }
