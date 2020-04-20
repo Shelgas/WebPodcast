@@ -27,6 +27,7 @@ namespace WebPodcast.WebApi
             services.AddDbContext<DataContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
             services.AddScoped<IDatingRepository, DatingRepository>();
+            services.AddCors();
             services.AddControllers();
         }
 
@@ -40,7 +41,9 @@ namespace WebPodcast.WebApi
 
             app.UseHttpsRedirection();
             app.UseRouting();
-            
+
+            app.UseCors(x => x.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin());
+
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
