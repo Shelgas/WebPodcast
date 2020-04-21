@@ -10,13 +10,15 @@ import { AppComponent } from './app.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { PodcastComponent } from './podcast/podcast.component';
 import { PodcastResolver } from './_resolver/podcast.resolver';
+import { PodcastCardComponent } from './podcast-card/podcast-card.component';
 
 
 @NgModule({
    declarations: [
       AppComponent,
       NavBarComponent,
-      PodcastComponent
+      PodcastComponent,
+      PodcastCardComponent
    ],
    imports: [
       BrowserModule,
@@ -26,7 +28,7 @@ import { PodcastResolver } from './_resolver/podcast.resolver';
       HttpClientModule
    ],
    providers: [
-      PodcastResolver,
+      PodcastResolver
    ],
    bootstrap: [
       AppComponent
