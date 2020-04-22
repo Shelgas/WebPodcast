@@ -2,18 +2,17 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
 using WebPodcast.WebApi.Models;
-using WebPodcast.WebApi.ViewModel;
 
-namespace WebPodcast.WebApi.DTO
+namespace WebPodcast.WebApi.ViewModel
 {
-    public class PodcastForList
+    public class PodcastForDetailed
     {
         public int Id { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
-        public byte[] Photo { get; set; }
+        public ICollection<RecordsForPodcastDetailed> Records { get; set; }
 
+        public byte[] Photo { get; set; }
     }
 }

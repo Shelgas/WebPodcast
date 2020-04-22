@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using WebPodcast.WebApi.Data;
 using WebPodcast.WebApi.DTO;
+using WebPodcast.WebApi.ViewModel;
 
 namespace WebPodcast.WebApi.Controllers
 {
@@ -32,8 +33,16 @@ namespace WebPodcast.WebApi.Controllers
         {
            
             var podcasts = await _repo.GetPodcasts();
-            var podcastForLists = _mapper.Map<IEnumerable<PodcastForList>>(podcasts);
-            return Ok(podcastForLists);
+            var podcastsForLists = _mapper.Map<IEnumerable<PodcastForList>>(podcasts);
+            return Ok(podcastsForLists);
+        }
+
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetPodcast(int id)
+        {
+            var podcast = await _repo.GetPodcast(id);
+            var podcastFoReturn = _mapper.Map<PodcastForDetailed>(podcast);
+            return Ok(podcastFoReturn);
         }
     }
 }
