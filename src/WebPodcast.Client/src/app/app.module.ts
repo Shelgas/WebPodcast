@@ -11,6 +11,7 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { PodcastComponent } from './podcast/podcast.component';
 import { PodcastResolver } from './_resolver/podcast.resolver';
 import { PodcastCardComponent } from './podcast-card/podcast-card.component';
+import { PodcastDetailComponent } from './podcast-detail/podcast-detail.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { PodcastCardComponent } from './podcast-card/podcast-card.component';
       AppComponent,
       NavBarComponent,
       PodcastComponent,
-      PodcastCardComponent
+      PodcastCardComponent,
+      PodcastDetailComponent
    ],
    imports: [
       BrowserModule,

@@ -1,13 +1,18 @@
 <div class="card mb-4">
   <div class="card-img-wrapper">
     <img id="profileImage" src="data:image/jpg;base64,{{podcast.photo}}">
-    <div class="container overlay">
+    <div class="container overlay"  (click)="goRoute(podcast.id)" >
       <div class="card-text">
         <h5>{{podcast.name}}</h5>
         <div class="card-description lead">
           {{podcast.description}}
         </div>
       </div>
+    </div>
+    <div class="container">
+    <p class="podcast-title">
+      {{podcast.name}}
+    </p>
     </div>
   </div>
 </div>

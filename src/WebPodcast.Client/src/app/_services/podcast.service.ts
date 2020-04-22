@@ -16,4 +16,8 @@ getPodcasts(): Observable<IPodcast[]> {
   return this.http.get<IPodcast[]>(this.baseUrl + 'Podcast/');
 }
 
+getPodcast(id: number): Observable<IPodcast> {
+  return this.http.get<IPodcast>(this.baseUrl + 'Podcast/' + id);
+}
+
 }

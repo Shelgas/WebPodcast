@@ -1,9 +1,7 @@
-
-
 <div class="container mt-5">
   <div class="row">
-    <div *ngFor="let podcast of podcasts" class="col-lg-3 col-md-3 col-sm-6">
-        <app-podcast-card [podcast] = "podcast"></app-podcast-card>
+    <div *ngFor="let podcast of podcasts" class="col-lg-3 col-md-3 col-sm-6 mb-lg-4">
+        <app-podcast-card  [podcast] = "podcast"></app-podcast-card>
     </div>
   </div>
 </div>

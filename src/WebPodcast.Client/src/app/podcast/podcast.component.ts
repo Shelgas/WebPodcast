@@ -18,7 +18,6 @@ export class PodcastComponent implements OnInit {
     this.router.data.subscribe(data => {
       this.podcasts = data['podcasts'];
     });
-    console.log(this.podcasts);
   }
 
 }

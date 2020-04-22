@@ -8,6 +8,10 @@
 
 }
 
+.card {
+    margin-bottom: 30px;
+}
+
 .overlay {
     position: absolute;
     top: 0;
@@ -34,6 +38,12 @@
     margin-top: 20px;
     font-size: 17px;
     color: rgb(177, 182, 184);
+}
+
+.podcast-title{
+    color: rgb(116, 122, 124);
+    font-weight: 600;
+    font-size: 18px;
 }
   
   

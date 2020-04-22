@@ -1,0 +1,14 @@
+.podcast-detaild {
+    margin-top: 30px; 
+}
+
+.podcast-desc{
+    font-size: 16px;
+}
+
+
+.podcast-img {
+    max-width: 100%;
+    height: auto;
+    min-height: 300px;
+}
