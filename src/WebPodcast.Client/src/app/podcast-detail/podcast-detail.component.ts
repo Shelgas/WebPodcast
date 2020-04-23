@@ -10,10 +10,11 @@ import { ActivatedRoute } from "@angular/router";
 })
 export class PodcastDetailComponent implements OnInit {
   podcast: IPodcast;
+  srcData: string;
 
   constructor(
     private podcastService: PodcastService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
   ) {}
 
   ngOnInit() {
@@ -24,11 +25,12 @@ export class PodcastDetailComponent implements OnInit {
     this.podcastService.getPodcast(+this.route.snapshot.params["id"]).subscribe(
       (podcast: IPodcast) => {
         this.podcast = podcast;
-        console.log(this.podcast);
+        this.srcData = 'data:image/jpg;base64,' + podcast.photo;
       },
       (error) => {
         console.log(error);
       }
     );
   }
+  
 }

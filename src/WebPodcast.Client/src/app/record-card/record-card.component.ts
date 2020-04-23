@@ -8,6 +8,8 @@ import { IRecords } from '../_models/record';
 })
 export class RecordCardComponent implements OnInit {
   @Input() record: IRecords;
+  dateHandling: number;
+
 
   constructor() { }
 

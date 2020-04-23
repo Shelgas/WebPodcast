@@ -20,7 +20,16 @@ namespace WebPodcast.WebApi.Services
             CreateMap<Podcast, PodcastForDetailed>()
                 .ForMember(dest => dest.Photo, opt =>
                     opt.MapFrom(src => File.ReadAllBytes(src.Photo)));
-            CreateMap<Record, RecordsForPodcastDetailed>();
+            CreateMap<Record, RecordsForPodcastDetailed>()
+                .ForMember(dest => dest.UploadDate, opt =>
+                    opt.MapFrom(src => DataHandler(src.UploadDate)))
+                .ForMember(dest => dest.Audio, opt => 
+                    opt.MapFrom(src => File.ReadAllBytes(src.PathToRecord)));
+        }
+
+        private static string DataHandler(DateTime date)
+        {
+            return $"{date.Day}.{date.Month}.{date.Year}";
         }
     }
 }

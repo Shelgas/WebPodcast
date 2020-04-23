@@ -3,5 +3,5 @@ export interface IRecords {
     name: string;
     uploadDate: Date;
     description: string;
-    pathToRecord: string;
+    audio: string;
 }

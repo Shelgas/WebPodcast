@@ -1,0 +1,11 @@
+.record-card {
+    text-align: justify;
+}
+
+.record-date {
+    margin-top: -10px;
+    margin-bottom: 0px;
+    font-size: 14px;
+    font-style: italic;
+    font-weight: 400;
+}
