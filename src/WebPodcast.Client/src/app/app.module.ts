@@ -12,6 +12,7 @@ import { PodcastComponent } from './podcast/podcast.component';
 import { PodcastResolver } from './_resolver/podcast.resolver';
 import { PodcastCardComponent } from './podcast-card/podcast-card.component';
 import { PodcastDetailComponent } from './podcast-detail/podcast-detail.component';
+import { RecordCardComponent } from './record-card/record-card.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { PodcastDetailComponent } from './podcast-detail/podcast-detail.componen
       NavBarComponent,
       PodcastComponent,
       PodcastCardComponent,
-      PodcastDetailComponent
+      PodcastDetailComponent,
+      RecordCardComponent
    ],
    imports: [
       BrowserModule,

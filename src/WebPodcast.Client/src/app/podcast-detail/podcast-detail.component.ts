@@ -24,6 +24,7 @@ export class PodcastDetailComponent implements OnInit {
     this.podcastService.getPodcast(+this.route.snapshot.params["id"]).subscribe(
       (podcast: IPodcast) => {
         this.podcast = podcast;
+        console.log(this.podcast);
       },
       (error) => {
         console.log(error);

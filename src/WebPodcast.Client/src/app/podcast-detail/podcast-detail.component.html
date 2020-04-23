@@ -1,9 +1,18 @@
 <div class="container podcast-detaild">
-  <div class="col-11 col-lg-5">
-    <img class="podcast-img" src="data:image/jpg;base64,{{podcast?.photo}}">
-    <hr />
-    <div class="podcast-desc">
-      <p>{{podcast?.description}}</p>
+  <div class="row">
+    <div class="col-12 col-lg-5">
+      <img class="podcast-img" src="data:image/jpg;base64,{{podcast?.photo}}">
+      <hr />
+      <div class="podcast-desc">
+        <p>{{podcast?.description}}</p>
+      </div>
+    </div>
+    <div class="сol-12 col-lg-6">
+      <h1>{{podcast?.name}}</h1>
+      <hr>
+      <div *ngFor="let record of podcast?.records">
+        <app-record-card [record] = "record"></app-record-card>
+      </div>
     </div>
   </div>
 </div>
