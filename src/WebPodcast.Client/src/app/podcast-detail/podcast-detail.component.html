@@ -4,13 +4,13 @@
       <img class="podcast-img" [src]="srcData">
       <hr />
       <div class="podcast-desc">
-        <p>{{podcast?.description}}</p>
+        <p>{{podcast.description}}</p>
       </div>
     </div>
     <div class="сol-12 col-lg-6">
-      <h1>{{podcast?.name}}</h1>
+      <h1>{{podcast.name}}</h1>
       <hr>
-      <div *ngFor="let record of podcast?.records">
+      <div *ngFor="let record of records">
         <app-record-card [record] = "record"></app-record-card>
       </div>
     </div>

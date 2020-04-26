@@ -13,6 +13,7 @@ import { PodcastResolver } from './_resolver/podcast.resolver';
 import { PodcastCardComponent } from './podcast-card/podcast-card.component';
 import { PodcastDetailComponent } from './podcast-detail/podcast-detail.component';
 import { RecordCardComponent } from './record-card/record-card.component';
+import { PodcastDetailResolver } from './_resolver/podcastDetail.resolver';
 
 
 @NgModule({
@@ -32,7 +33,8 @@ import { RecordCardComponent } from './record-card/record-card.component';
       HttpClientModule
    ],
    providers: [
-      PodcastResolver
+      PodcastResolver,
+      PodcastDetailResolver
    ],
    bootstrap: [
       AppComponent

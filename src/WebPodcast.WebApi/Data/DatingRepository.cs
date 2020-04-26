@@ -35,14 +35,15 @@ namespace WebPodcast.WebApi.Data
             return await _context.Podcasts.Include(p => p.Records).FirstOrDefaultAsync(p => p.Id == id);
         }
 
-        public async Task<Record> GetRecord(int id)
+        public async Task<IEnumerable<Record>> GetRecords(int id)
         {
-            return await _context.Records.FirstOrDefaultAsync(r => r.Id == id);
+            return await _context.Records.Where(r => r.PodcastId == id).ToArrayAsync();
         }
 
         public async Task<IEnumerable<Podcast>> GetPodcasts()
         {
             return await _context.Podcasts.ToListAsync();
         }
+
     }
 }

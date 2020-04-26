@@ -14,7 +14,7 @@ namespace WebPodcast.WebApi.Data
         void Delete<T>(T entity) where T : class;
         Task<bool> SaveAll();
         Task<Podcast> GetPodcast(int id);
-        Task<Record> GetRecord(int id);
+        Task<IEnumerable<Record>> GetRecords(int id);
 
         Task<IEnumerable<Podcast>> GetPodcasts();
     }
