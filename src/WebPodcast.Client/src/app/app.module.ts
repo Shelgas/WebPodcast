@@ -14,6 +14,27 @@ import { PodcastCardComponent } from './podcast-card/podcast-card.component';
 import { PodcastDetailComponent } from './podcast-detail/podcast-detail.component';
 import { RecordCardComponent } from './record-card/record-card.component';
 import { PodcastDetailResolver } from './_resolver/podcastDetail.resolver';
+import { AudioPlayerComponent } from './audio-player/audio-player.component';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import {
+   MatButtonModule,
+   MatListModule,
+   MatSliderModule,
+   MatIconModule,
+   MatToolbarModule,
+   MatCardModule
+ } from "@angular/material";
+
+
+
+const materialModules = [
+   MatButtonModule,
+   MatListModule,
+   MatSliderModule,
+   MatIconModule,
+   MatToolbarModule,
+   MatCardModule
+ ];
 
 
 @NgModule({
@@ -23,14 +44,17 @@ import { PodcastDetailResolver } from './_resolver/podcastDetail.resolver';
       PodcastComponent,
       PodcastCardComponent,
       PodcastDetailComponent,
-      RecordCardComponent
+      RecordCardComponent,
+      AudioPlayerComponent
    ],
    imports: [
       BrowserModule,
       BrowserAnimationsModule,
       BsDropdownModule.forRoot(),
       RouterModule.forRoot(appRoutes),
-      HttpClientModule
+      HttpClientModule,
+      materialModules,
+      MatProgressSpinnerModule
    ],
    providers: [
       PodcastResolver,
@@ -38,6 +62,9 @@ import { PodcastDetailResolver } from './_resolver/podcastDetail.resolver';
    ],
    bootstrap: [
       AppComponent
+   ],
+   exports: [
+      materialModules
    ]
 })
 export class AppModule { }

@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="audio-controller row">
+    <div class="audio-button">
+      <button mat-button (click)="play()" [disabled]="state?.error || !canActive" *ngIf="!state?.playing">
+        <mat-icon mat-list-icon>play_circle_filled</mat-icon>
+      </button>
+      <button mat-button (click)="pause()" *ngIf="state?.playing">
+        <mat-icon mat-list-icon>pause</mat-icon>
+      </button>
+    </div>
+    <div class="time">
+      <div *ngIf="state?.duration"><span class="current-time">{{ state?.readableCurrentTime }}</span><br>
+        <div class="readable-time">{{ state?.readableDuration }}</div>
+      </div>
+      <div *ngIf="!state?.duration"><span class="current-time">00:00:00</span><br><span
+          class="readable-time">00:00:00</span></div>
+    </div>
+    <mat-slider class="time-slider" min="0" [max]="state?.duration" step="1" [value]="state?.currentTime"
+      (input)="onSliderChangeEnd($event)" [disabled]="state?.error"></mat-slider>
+  
+  </div>
+</div>

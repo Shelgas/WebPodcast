@@ -40,6 +40,11 @@ namespace WebPodcast.WebApi.Data
             return await _context.Records.Where(r => r.PodcastId == id).ToArrayAsync();
         }
 
+        public async Task<Record> GetAudio(int id)
+        {
+            return await _context.Records.FirstOrDefaultAsync(r => r.Id == id);
+        }
+
         public async Task<IEnumerable<Podcast>> GetPodcasts()
         {
             return await _context.Podcasts.ToListAsync();

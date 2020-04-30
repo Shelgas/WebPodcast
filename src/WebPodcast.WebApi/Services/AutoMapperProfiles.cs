@@ -22,9 +22,12 @@ namespace WebPodcast.WebApi.Services
                     opt.MapFrom(src => File.ReadAllBytes(src.Photo)));
             CreateMap<Record, RecordsForPodcastDetailed>()
                 .ForMember(dest => dest.UploadDate, opt =>
-                    opt.MapFrom(src => DataHandler(src.UploadDate)))
-                .ForMember(dest => dest.Audio, opt => 
-                    opt.MapFrom(src => File.ReadAllBytes(src.PathToRecord)));
+                    opt.MapFrom(src => DataHandler(src.UploadDate)));
+                // .ForMember(dest => dest.Audio, opt => 
+                //     opt.MapFrom(src => File.ReadAllBytes(src.PathToRecord)));
+                CreateMap<Record, Audio>()
+                    .ForMember(dest => dest.Record, opt =>
+                        opt.MapFrom(src => File.ReadAllBytes(src.PathToRecord)));
         }
 
         private static string DataHandler(DateTime date)

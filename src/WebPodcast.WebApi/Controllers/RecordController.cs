@@ -26,7 +26,7 @@ namespace WebPodcast.WebApi.Controllers
         public async Task<IActionResult> GetRecords(int id)
         {
             var records = await _repo.GetRecords(id);
-            var recordsForPodcast = _mapper.Map<IEnumerable<RecordsForPodcastDetailed>>(records);
+            var recordsForPodcast = _mapper.Map<IEnumerable<RecordsForPodcastDetailed>>(records.OrderBy(x => x.UploadDate).Reverse());
             return Ok(recordsForPodcast);
         }
     }

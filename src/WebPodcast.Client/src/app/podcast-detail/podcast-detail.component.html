@@ -6,12 +6,18 @@
       <div class="podcast-desc">
         <p>{{podcast.description}}</p>
       </div>
+      <div style="margin-top: 14px;">
+        <a href="*">Редактировать</a> |
+        <a href="*">Удалить</a>
+    </div>
     </div>
     <div class="сol-12 col-lg-6">
-      <h1>{{podcast.name}}</h1>
+      <div class="container podcast-name row">
+        <h1 >{{podcast.name}}</h1>
+      </div>
       <hr>
       <div *ngFor="let record of records">
-        <app-record-card [record] = "record"></app-record-card>
+        <app-record-card [record]="record"></app-record-card>
       </div>
     </div>
   </div>

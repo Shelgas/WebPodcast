@@ -1,0 +1,35 @@
+.audio-controller {
+  background-color: rgb(241, 243, 244);
+  border-radius: 20px;
+  align-items: center;
+}
+.time{
+  padding: 5px 13px 5px 5px;
+  font-size: 13.5px;
+}
+
+.audio-button button:{
+  border-radius: 20%;
+}
+
+.audio-load {
+  width: 10px;
+}
+
+
+.readable-time{
+  border-top: 1px inset rgb(193, 194, 195);
+  padding-top: 2px;
+}
+
+.time-slider {
+  width: 70%;
+}
+
+
+.button-valume:hover {
+  background-color: rgb(241, 243, 244);
+  width: auto;
+}
+
+

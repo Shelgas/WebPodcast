@@ -15,6 +15,7 @@ namespace WebPodcast.WebApi.Data
         Task<bool> SaveAll();
         Task<Podcast> GetPodcast(int id);
         Task<IEnumerable<Record>> GetRecords(int id);
+        Task<Record> GetAudio(int id);
 
         Task<IEnumerable<Podcast>> GetPodcasts();
     }
